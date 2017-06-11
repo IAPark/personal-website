@@ -1,0 +1,11 @@
+.event {
+  position: relative;
+  display: flex; }
+
+.event .date-range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px; }
+
+/*# sourceMappingURL=bundle.css.map*/

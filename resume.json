@@ -1,0 +1,55 @@
+{
+    "basics": {
+        "name": "Isaac Park",
+        "label": "Programmer",
+        "image": "",
+        "email": "isaac.a.park@gmail.com",
+        "phone": "330-474-9654",
+        "url": "https://isaacpark.me",
+        "summary": "",
+        "location": {
+            "address": "1515 Lake Martin Dr.",
+            "postalCode": "44240",
+            "city": "Kent",
+            "region": "Ohio"
+        }
+    },
+    "work": [
+
+    ],
+    "education": [
+        {
+            "institution": "Kent State University",
+            "area": "Computer Science",
+            "studyType": "Bachelor",
+            "startDate": "2013-8-1",
+            "endDate": "2017-5-1",
+            "gpa": "3.907"
+        }, 
+        {
+            "institution": "Kent State University",
+            "area": "Biotech",
+            "studyType": "Bachelor",
+            "startDate": "2017-8-1",
+            "endDate": "2019-5-1"
+        }
+    ],
+    "projects": [
+        {
+            "name": "PITherm:",
+            "description": "",
+            "highlights": [
+                "",
+                ""
+            ],
+            "keywords": [],
+            "startDate": "2017-8-1",
+            "endDate": "2019-5-1",
+            "url": "",
+            "roles": [
+                ""
+            ],
+            "type": "application"
+        }    
+    ]
+}
