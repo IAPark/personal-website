@@ -33,7 +33,7 @@ export function Bio (props: Props) {
                             <a href={'mailto:'+props.email}>{props.email}</a>
                         </BasicInfoLine>
                         <BasicInfoLine name='Phone'>
-                            {props.phone}
+                            <a href={'tell:'+props.phone}>{props.phone}</a>
                         </BasicInfoLine>
                         <h1>Languages</h1>
                         <BasicInfoLine name='ES6 JS'>
