@@ -6,6 +6,6 @@ interface Props {
 
 export function Page (props: Props) {
     return  <div className='page'>
-                {React.Children.map(props.children, child => <div>{child}</div>)}
+                {props.children}
             </div>
 }

@@ -7,15 +7,27 @@
 body {
 }
 
+.stars{
+    .filled {
+        fill: orange;
+    }
+
+    .unfilled {
+        fill: white;
+    }
+}
+
+a {
+    color: inherit;
+}
+
 h1 {
     font-size: 1.25em;
     margin: 0;
 }
-.page {
-}
-
-.page > * {
+.content-row {
     max-width: 700px;
+    padding: 1em;
     margin: 0 auto;
 }
 
