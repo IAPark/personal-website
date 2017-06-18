@@ -27,20 +27,23 @@ export function MainPage () {
                         </Bio>
                     </div>
                 </div>
-                <div className="content-row">
-                    <DateRangeEvent start={new Date("August 2013")}
-                                    end={new Date("May 2017")} 
-                                    mainTitle="Kent State University" 
-                                    subTitle="Bachelor's in Computer Science">
-                        Graduated summa cum laude with a 3.907 GPA. 
-                    </DateRangeEvent>
-                    <DateRangeEvent start={new Date("August 2017")}
-                                    end={new Date("May 2019")} 
-                                    mainTitle="Kent State University" 
-                                    subTitle="Bachelor's in Biotechnology">
-                        After graduating from Kent I plan to continue my education hoping to position myself
-                        to go into the field of synthetic biology with a main focus still being on CS
-                    </DateRangeEvent>
+                <div className="education-block">
+                    <div className="content-row">
+                        <h1>Education</h1>
+                        <DateRangeEvent start={new Date("August 2013")}
+                                        end={new Date("May 2017")} 
+                                        mainTitle="Kent State University" 
+                                        subTitle="Bachelor's in Computer Science">
+                            Graduated summa cum laude with a 3.907 GPA. 
+                        </DateRangeEvent>
+                        <DateRangeEvent start={new Date("August 2017")}
+                                        end={new Date("May 2019")} 
+                                        mainTitle="Kent State University" 
+                                        subTitle="Bachelor's in Biotechnology">
+                            After graduating from Kent I plan to continue my education hoping to position myself
+                            to go into the field of synthetic biology with a main focus still being on CS
+                        </DateRangeEvent>
+                    </div>
                 </div>
             </Page>
 }
