@@ -5,17 +5,22 @@
     display: flex;
     margin: 40px 0;
     align-items: baseline;
+    flex-wrap: wrap;
+    .content {
+        flex: 1;
+        min-width: 400px;
+        margin-top: 5px;
+    }
 }
 
 .event .date-range{
-    display: flex;
-    justify-content: center;
     margin-right:15px;
+    color: orange;
+    margin-bottom: 5px;
     flex: none;
 }
 
 .education-block {
-    z-index: 0;
     background: #334344;
     color: white;
 }
