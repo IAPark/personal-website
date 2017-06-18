@@ -28,7 +28,7 @@ export function Bio (props: Props) {
                     <BasicInfoLine name='Age'>
                         {Math.floor((new Date().getTime() - props.birth.getTime())/SECONDS_IN_A_YEAR)}
                     </BasicInfoLine>
-                    <BasicInfoLine name='Emai'>
+                    <BasicInfoLine name='Email'>
                         <a href={'mailto:'+props.email}>{props.email}</a>
                     </BasicInfoLine>
                     <BasicInfoLine name='Phone'>
