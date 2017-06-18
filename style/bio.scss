@@ -12,9 +12,12 @@
     max-width: 600px;
     margin: 0 auto;
     .content {
+        max-width: 600px;
+
         margin: 0 auto;
         display: inline-block;
         display: flex;
+        flex-wrap: wrap-reverse;
         position: relative;
     }
     .pic {
@@ -35,15 +38,18 @@
         @extend .content;
         display: flex;
         flex-direction: column;
+        flex: 1;
+        min-width: 200px;
     }
 
     .basic-info {
-        margin-right: 20px;
-        width: 240px;
+        padding-right: 20px;
+        min-width: 240px;
         flex-shrink: 0;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        margin: 0 auto;
     }
 
     .basic-info * {
