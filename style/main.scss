@@ -1,10 +1,14 @@
 @import 'colors';
 @import 'reset';
 @import 'bio';
+@import 'event';
 
 @import 'common';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Slab|Spectral|Work+Sans');
 
 body {
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
 }
 
 .stars{
@@ -17,6 +21,18 @@ body {
     }
 }
 
+.content-row {
+    max-width: 700px;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.content-row > h1 {
+    text-align: center;
+    border-bottom: 2px solid white;
+
+}
+
 a {
     color: inherit;
 }
@@ -24,23 +40,4 @@ a {
 h1 {
     font-size: 1.25em;
     margin: 0;
-}
-.content-row {
-    max-width: 700px;
-    padding: 1em;
-    margin: 0 auto;
-}
-
-.event {
-    position: relative;
-    display: flex;
-    margin: 40px 0;
-    align-items: baseline;
-}
-
-.event .date-range{
-    display: flex;
-    justify-content: center;
-    margin-right:15px;
-    flex: none;
 }

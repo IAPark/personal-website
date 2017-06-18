@@ -5,21 +5,16 @@
     color: white;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     padding: 20px 0;
-    font-size: 20px;
+    
+    position:relative;
+    z-index: 1;
 }
 
 .bio {
-    max-width: 600px;
-    margin: 0 auto;
-    .content {
-        max-width: 600px;
-
-        margin: 0 auto;
-        display: inline-block;
-        display: flex;
-        flex-wrap: wrap-reverse;
-        position: relative;
-    }
+    display: inline-block;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    position: relative;
     .pic {
         flex: 1;
         width: 100%;
@@ -38,18 +33,18 @@
         @extend .content;
         display: flex;
         flex-direction: column;
-        flex: 1;
+        flex: 10000;
         min-width: 200px;
+        padding: 0 10px;
     }
 
     .basic-info {
-        padding-right: 20px;
-        min-width: 240px;
-        flex-shrink: 0;
+        padding: 0 10px;
+        min-width: 260px;
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 0 auto;
     }
 
     .basic-info * {
