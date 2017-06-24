@@ -29,7 +29,7 @@ body {
 
 .content-row > h1 {
     text-align: center;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid;
 
 }
 
@@ -40,4 +40,16 @@ a {
 h1 {
     font-size: 1.25em;
     margin: 0;
+}
+
+.menu-bar {
+    height: 2.5em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 6px 6px rgba(0, 0, 0, 0.5);;
+    background: #dddddd;
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    z-index: -1;
 }

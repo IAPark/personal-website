@@ -25,9 +25,6 @@ export function Bio (props: Props) {
                     <BasicInfoLine name='Name'>
                         {props.name}
                     </BasicInfoLine>
-                    <BasicInfoLine name='Age'>
-                        {Math.floor((new Date().getTime() - props.birth.getTime())/SECONDS_IN_A_YEAR)}
-                    </BasicInfoLine>
                     <BasicInfoLine name='Email'>
                         <a href={'mailto:'+props.email}>{props.email}</a>
                     </BasicInfoLine>
@@ -35,7 +32,7 @@ export function Bio (props: Props) {
                         <a href={'tell:'+props.phone}>{props.phone}</a>
                     </BasicInfoLine>
                     <h1>Languages</h1>
-                    <BasicInfoLine name='ES6 JS'>
+                    <BasicInfoLine name='Typescript'>
                         <Stars stars={5} filled={4}/>
                     </BasicInfoLine>
                     <BasicInfoLine name='Python'>

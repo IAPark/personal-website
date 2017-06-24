@@ -3,7 +3,7 @@
 .event {
     position: relative;
     display: flex;
-    margin: 40px 0;
+    margin-top: 40px;
     align-items: baseline;
     flex-wrap: wrap;
     .content {
@@ -13,6 +13,8 @@
     }
 }
 
+
+
 .event .date-range{
     margin-right:15px;
     color: orange;
@@ -21,6 +23,24 @@
 }
 
 .education-block {
+    position: relative;
     background: #334344;
     color: white;
+    box-shadow: $boxShadow;
+}
+
+.experience-block {
+    position: relative;
+    background: #0f314d; 
+    color: white;
+    box-shadow: $boxShadow;
+    z-index: -1;
+}
+
+.projects-block {
+    position: relative;
+    background: #334344; 
+    color: white;
+    z-index: -2;
+
 }
