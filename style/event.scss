@@ -6,6 +6,7 @@
     margin-top: 40px;
     align-items: baseline;
     flex-wrap: wrap;
+    font-size: 0.95em;
     .content {
         flex: 1;
         flex-basis: 400px;
@@ -35,6 +36,7 @@
     color: white;
     box-shadow: $boxShadow;
     z-index: -1;
+    padding-bottom: 3em;
 }
 
 .projects-block {
