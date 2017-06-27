@@ -39,7 +39,7 @@
     transform: translateY(-2px);
 }
 
-.fa span:before {
+.fa span:not(:empty):before {
     content: '\00a0\00a0\00a0\00a0\00a0\00a0'
 }
 .fa span{
@@ -48,6 +48,8 @@
     left: 0;
     background: inherit;
     overflow: hidden;
+    height: 1em;
+    min-width: 1em;
     max-width: 1em;
 
     border-radius: 1em;
