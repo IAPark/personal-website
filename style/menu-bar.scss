@@ -1,0 +1,78 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import 'common';
+@import "node_modules/material-shadows/material-shadows";
+
+
+.menu-bar {
+    height: 2.5em;
+    box-shadow: shadow(1);
+    background: #dddddd;
+    position: relative;
+    z-index: 2;
+}
+
+.fa {
+    padding: 0.5em;
+    min-width: 1em;
+    max-width: 1em;
+
+    height: 1em;
+    text-align: center;
+    text-decoration: none;
+    background: black;
+    color: white;
+    border-radius: 1em;
+    margin: 0.25em;
+    z-index: 4;
+    position: relative;
+    transition: transform 0.1s;
+    white-space: nowrap;
+}
+
+.fa:before {
+    z-index: 2;
+    position: relative;
+}
+
+
+.fa:hover {
+    transform: translateY(-2px);
+}
+
+.fa span:before {
+    content: '\00a0\00a0\00a0\00a0\00a0\00a0'
+}
+.fa span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    overflow: hidden;
+    max-width: 1em;
+
+    border-radius: 1em;
+    padding: 0.5em;
+    transition: max-width 0.9s, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    @include z-depth(6);
+}
+
+.fa:hover span {
+    display: initial;
+    max-width: 10em;
+    @include z-depth-focus();
+}
+.fa-github {
+    background: #24292e;
+}
+
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-linkedin {
+    background: #0084bf;
+}
+
+.fa-globe {
+    background: #392e2e;
+}

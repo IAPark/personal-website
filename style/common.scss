@@ -4,3 +4,8 @@
 }
 
 $boxShadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+
+@function shadow($level){
+  @return 0 5px*$level 10px*$level $level*5px rgba(0,0,0,0.19), 0 3px*$level 4px*$level rgba(0,0,0,0.23)
+}

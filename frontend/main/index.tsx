@@ -21,9 +21,8 @@ export function MainPage () {
                             email="me@isaacpark.me"
                             phone="330-474-9654">
                             I'm a developer, engineer, student, rock climber, reader,
-                            sometimes writer, and always curious. I'm at a point in my
-                            life where I'm trying to decide what I want that life to be.
-                            
+                            sometimes writer, and always curious. I'm working hard to
+                            contribute something of meaning in this short time I have
                         </Bio>
                     </div>
                 </div>
@@ -70,20 +69,6 @@ export function MainPage () {
                             Updated an Android app to support costum scan hardware.
                             Bug fix in house html to pdf render. Working on security
                             for a PHP for a new project.
-                        </DateRangeEvent>
-                    </div>
-                </div>
-
-
-                <div className="projects-block">
-                    <div className="content-row">
-                        <h1>Projects</h1>
-                        <DateRangeEvent start={new Date("August 2016")}
-                                        end={new Date("May 2017")} 
-                                        mainTitle="Kent State Deans Office" 
-                                        subTitle="Student developer">
-                            Working on projects to help Kent's board of trustees better interact with quarterly board books.
-                            React.js, 
                         </DateRangeEvent>
                     </div>
                 </div>
