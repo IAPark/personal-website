@@ -15,12 +15,12 @@ app.get('/', function (req, res) {
         <title>Isaac Park</title>
 
         <link rel="stylesheet" href="/public/style.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+        <link rel="stylesheet" href='public/fontello/css/fontello.css'/>
+
       </head>
       <body>
-        <div id='content' dangerouslySetInnerHTML={{__html: renderToString(<MainPage/>)}}/>
-        <script src={req.protocol+"://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react.min.js"}/>
-        <script src={req.protocol+"://cdnjs.cloudflare.com/ajax/libs/react/15.4.2/react-dom.min.js"}/>
-        <script src="/public/bundle.js"/>
+        <div id='content'><MainPage/></div> 
       </body>
     </html>
   ));

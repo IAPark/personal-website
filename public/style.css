@@ -1,4 +1,4 @@
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);@import url(https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Roboto+Slab|Spectral|Work+Sans);/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
 /**
@@ -493,7 +493,7 @@ template {
   position: relative;
   z-index: 2; }
 
-.fa {
+[class^="icon-"] {
   padding: 0.5em;
   min-width: 1em;
   max-width: 1em;
@@ -506,20 +506,21 @@ template {
   margin: 0.25em;
   z-index: 4;
   position: relative;
+  display: inline-block;
   transition: transform 0.1s;
   white-space: nowrap; }
 
-.fa:before {
+[class^="icon-"]:before {
   z-index: 2;
   position: relative; }
 
-.fa:hover {
+[class^="icon-"]:hover {
   transform: translateY(-2px); }
 
-.fa span:not(:empty):before {
+[class^="icon-"] span:not(:empty):before {
   content: '\A0\A0\A0\A0\A0\A0'; }
 
-.fa span {
+[class^="icon-"] span {
   position: absolute;
   top: 0;
   left: 0;
@@ -533,21 +534,21 @@ template {
   transition: max-width 0.9s, box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.4); }
 
-.fa:hover span {
+[class^="icon-"]:hover span {
   display: initial;
   max-width: 10em;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36); }
 
-.fa-github {
+.icon-github {
   background: #24292e; }
 
-.fa-facebook {
+.icon-facebook {
   background: #3B5998; }
 
-.fa-linkedin {
+.icon-linkedin {
   background: #0084bf; }
 
-.fa-globe {
+.icon-globe {
   background: #392e2e; }
 
 .content, .bio .description {

@@ -1,4 +1,5 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require("webpack");
 
 module.exports = {
     entry: ["./frontend/index.tsx", "./style/main.scss"],
@@ -29,6 +30,11 @@ module.exports = {
         ]
     },
 
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({minimize: true}),
+        new ExtractTextPlugin("style.css")
+    ],
+
     // When importing a module whose path matches one of the following, just
     // assume a corresponding global variable exists and use that instead.
     // This is important because it allows us to avoid bundling all of our
@@ -36,8 +42,5 @@ module.exports = {
     externals: {
         "react": "React",
         "react-dom": "ReactDOM"
-    },
-    plugins: [
-        new ExtractTextPlugin("style.css")
-    ]
+    }
 };

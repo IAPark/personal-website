@@ -59,7 +59,7 @@ export function Bio (props: Props) {
                 
                 <div className="description">
                     <div className="pic">
-                        <img src={props.photo}/>
+                        <img src={props.photo} width='100' height='100'/>
                     </div>
                     <h1>About Me</h1>
                     {props.children}

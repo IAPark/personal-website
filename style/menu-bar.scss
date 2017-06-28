@@ -1,4 +1,3 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import 'common';
 @import "node_modules/material-shadows/material-shadows";
 
@@ -11,7 +10,7 @@
     z-index: 2;
 }
 
-.fa {
+[class^="icon-"] {
     padding: 0.5em;
     min-width: 1em;
     max-width: 1em;
@@ -25,24 +24,25 @@
     margin: 0.25em;
     z-index: 4;
     position: relative;
+    display: inline-block;
     transition: transform 0.1s;
     white-space: nowrap;
 }
 
-.fa:before {
+[class^="icon-"]:before {
     z-index: 2;
     position: relative;
 }
 
 
-.fa:hover {
+[class^="icon-"]:hover {
     transform: translateY(-2px);
 }
 
-.fa span:not(:empty):before {
+[class^="icon-"] span:not(:empty):before {
     content: '\00a0\00a0\00a0\00a0\00a0\00a0'
 }
-.fa span{
+[class^="icon-"] span{
     position: absolute;
     top: 0;
     left: 0;
@@ -58,23 +58,23 @@
     @include z-depth(6);
 }
 
-.fa:hover span {
+[class^="icon-"]:hover span {
     display: initial;
     max-width: 10em;
     @include z-depth-focus();
 }
-.fa-github {
+.icon-github {
     background: #24292e;
 }
 
-.fa-facebook {
+.icon-facebook {
     background: #3B5998;
 }
 
-.fa-linkedin {
+.icon-linkedin {
     background: #0084bf;
 }
 
-.fa-globe {
+.icon-globe {
     background: #392e2e;
 }
