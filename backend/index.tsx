@@ -17,6 +17,7 @@ app.get('/', function (req, res) {
         <link rel="stylesheet" href="/public/style.css"/>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
         <link rel="stylesheet" href='public/fontello/css/fontello.css'/>
+        <link rel="icon" href="/public/favcon.png" />
 
       </head>
       <body>
