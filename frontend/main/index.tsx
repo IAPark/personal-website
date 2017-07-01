@@ -47,28 +47,32 @@ export function MainPage () {
                 <div className="experience-block">
                     <div className="content-row">
                         <h1>Experience</h1>
-                        <DateRangeEvent start={new Date("August 2016")}
-                                        end={new Date("May 2017")} 
-                                        mainTitle="Kent State Deans Office" 
-                                        subTitle="Student developer">
-                            Working on projects to help Kent's board of trustees better interact with quarterly board books.
-                            React.js, 
-                        </DateRangeEvent>
                         <DateRangeEvent start={new Date("August 2014")}
                                         end={new Date("May 2017")} 
                                         mainTitle="Kent State University Libraries" 
-                                        subTitle="Student worker">
+                                        subTitle="Student worker"
+                                        technologies={['react', 'flask', 'c++', 'ngnix']}>
                             Though my primary rule was support developed a program to montitor
                             which public machines were in use.
+                        </DateRangeEvent>
+
+                        <DateRangeEvent start={new Date("August 2016")}
+                                        end={new Date("May 2017")} 
+                                        mainTitle="Kent State Deans Office" 
+                                        subTitle="Student developer"
+                                        technologies={['react', 'flask', 'peewee', 'pdf.js']}>
+                            Working on projects to help Kent's board of trustees better interact with quarterly board books.
+                            React.js, 
                         </DateRangeEvent>
 
                         <DateRangeEvent start={new Date("May 17 2017")}
                                         end={new Date("August 2017")} 
                                         mainTitle="Comercial Time Share Inc" 
-                                        subTitle="Development Intern">
+                                        subTitle="Development Intern"
+                                        technologies={['php', 'android', 'sql', 'c++', 'pdf']}>
                             Updated an Android app to support costum scan hardware.
                             Bug fix in house html to pdf render. Working on security
-                            for a PHP for a new project.
+                            for a new PHP project.
                         </DateRangeEvent>
                     </div>
                 </div>

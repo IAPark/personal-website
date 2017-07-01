@@ -6,10 +6,12 @@ interface Props {
     end: Date,
     mainTitle: string,
     subTitle: string,
+    technologies?: string[],
     website?: string
 }
 
 export function DateRangeEvent (props: Props) {
+    let technologies = props.technologies?props.technologies:[];
     return <div className='event'>
                 <div className='date-range'>
                     <MonthDate date={props.start}/>&nbsp;-&nbsp;<MonthDate date={props.end}/>
@@ -21,6 +23,10 @@ export function DateRangeEvent (props: Props) {
                     {props.children}
                     </div>
                     {props.website?<a>{props.website}</a>:null}
+                    {technologies.map( (n, i)=> <span key={i}>
+                                                    {i>0?' ':''}
+                                                    <span className={'tech-'+n}/>
+                                                </span>)}
                 </div>
            </div>
 }
