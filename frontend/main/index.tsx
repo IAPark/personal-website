@@ -52,7 +52,7 @@ export function MainPage () {
                                         mainTitle="Kent State University Libraries" 
                                         subTitle="Student worker"
                                         technologies={['react', 'flask', 'c++', 'ngnix']}>
-                            Though my primary rule was support developed a program to montitor
+                            Though my primary rule was support developed a program to monitor
                             which public machines were in use.
                         </DateRangeEvent>
 
@@ -66,13 +66,13 @@ export function MainPage () {
                         </DateRangeEvent>
 
                         <DateRangeEvent start={new Date("May 17 2017")}
-                                        end={new Date("August 2017")} 
-                                        mainTitle="Comercial Time Share Inc" 
+                                        end={new Date("December 2017")} 
+                                        mainTitle="Commercial Time Share Inc" 
                                         subTitle="Development Intern"
                                         technologies={['php', 'android', 'sql', 'c++', 'pdf']}>
-                            Updated an Android app to support costum scan hardware.
-                            Bug fix in house html to pdf render. Working on security
-                            for a new PHP project.
+                            Updated an Android app to support physical scan hardware.
+                            Bug fix for an in house html to pdf render. Working on debug 
+                            framework for new project.
                         </DateRangeEvent>
                     </div>
                 </div>
