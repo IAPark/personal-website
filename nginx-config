@@ -3,11 +3,11 @@ server {
 	listen 80 default_server;
 	listen [::]:80 default_server;
 
-	root /var/www/lab.isaacpark.me;
+	root /var/www/isaacpark.me;
 
     index index.html index.htm index.nginx-debian.html;
 
-	server_name lab.isaacpark.me;
+	server_name isaacpark.me;
 
 	location / {
         proxy_set_header X-Real-IP $remote_addr;
