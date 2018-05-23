@@ -3,7 +3,7 @@ import { MonthDate } from '../month-date'
 interface Props {
     children?: React.ReactChild,
     start: Date,
-    end: Date,
+    end?: Date,
     mainTitle: string,
     subTitle: string,
     technologies?: string[],
@@ -14,7 +14,9 @@ export function DateRangeEvent (props: Props) {
     let technologies = props.technologies?props.technologies:[];
     return <div className='event'>
                 <div className='date-range'>
-                    <MonthDate date={props.start}/>&nbsp;-&nbsp;<MonthDate date={props.end}/>
+                    <MonthDate date={props.start}/>
+                    <span>-</span>
+                    {props.end?<MonthDate date={props.end}/>:<span>Present</span>}
                 </div>
                 <div className='content'>
                     <h1>{props.mainTitle}</h1>

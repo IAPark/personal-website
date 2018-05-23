@@ -399,7 +399,7 @@ template {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   padding: 20px 0;
   position: relative;
-  z-index: 1; }
+  z-index: 3; }
 
 .bio {
   display: inline-block;
@@ -460,12 +460,17 @@ template {
   margin-right: 15px;
   color: orange;
   margin-bottom: 5px;
-  flex: none; }
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  width: 187px;
+  justify-content: space-between; }
 
 .education-block {
   position: relative;
   background: #334344;
   color: white;
+  z-index: 2;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .experience-block {
@@ -473,14 +478,45 @@ template {
   background: #0f314d;
   color: white;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  z-index: -1;
+  z-index: 1;
   padding-bottom: 3em; }
 
 .projects-block {
   position: relative;
   background: #334344;
   color: white;
-  z-index: -2; }
+  z-index: 0; }
+
+[class^='tech-']:before {
+  background: white;
+  color: black;
+  border-radius: 0.25em;
+  padding: 1px 3px;
+  font-size: 0.75em; }
+
+.tech-react:before {
+  content: 'React.js'; }
+
+.tech-c\+\+:before {
+  content: 'C++'; }
+
+.tech-flask:before {
+  content: 'Flask'; }
+
+.tech-peewee:before {
+  content: 'Peewee'; }
+
+.tech-sql:before {
+  content: 'SQL'; }
+
+.tech-android:before {
+  content: 'Android'; }
+
+.tech-php:before {
+  content: 'PHP'; }
+
+.tech-pdf\.js:before {
+  content: 'PDF.js'; }
 
 .content, .bio .description {
   letter-spacing: .02em;
@@ -491,7 +527,7 @@ template {
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.19), 0 3px 4px rgba(0, 0, 0, 0.23);
   background: #dddddd;
   position: relative;
-  z-index: 2; }
+  z-index: 10; }
 
 [class^="icon-"] {
   padding: 0.5em;
@@ -550,6 +586,9 @@ template {
 
 .icon-globe {
   background: #392e2e; }
+
+.icon-resume {
+  background: #334344; }
 
 .content, .bio .description {
   letter-spacing: .02em;

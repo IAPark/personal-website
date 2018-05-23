@@ -21,6 +21,10 @@
     color: orange;
     margin-bottom: 5px;
     flex: none;
+    display: flex;
+    flex-direction: row;
+    width: 187px;
+    justify-content: space-between;
 }
 
 .education-block {

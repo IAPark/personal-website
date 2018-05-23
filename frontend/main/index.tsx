@@ -62,17 +62,24 @@ export function MainPage () {
                                         subTitle="Student developer"
                                         technologies={['react', 'flask', 'peewee', 'pdf.js']}>
                             Working on projects to help Kent's board of trustees better interact with quarterly board books.
-                            React.js, 
                         </DateRangeEvent>
 
                         <DateRangeEvent start={new Date("May 17 2017")}
-                                        end={new Date("December 2017")} 
+                                        end={new Date("May 11 2018")} 
                                         mainTitle="Commercial Time Share Inc" 
                                         subTitle="Development Intern"
                                         technologies={['php', 'android', 'sql', 'c++', 'pdf']}>
                             Updated an Android app to support physical scan hardware.
-                            Bug fix for an in house html to pdf render. Working on debug 
-                            framework for new project.
+                            Bug fix for an in house html to pdf render. Created architecture 
+                            for tire tracking system. Built framework to aid in development of 
+                            PHP + Soap web app to meet imposed requirements.
+                        </DateRangeEvent>
+
+                        <DateRangeEvent start={new Date("June 11 2018")}
+                                        mainTitle="Academia Inc" 
+                                        subTitle="Full-Stack Software Engineer"
+                                        technologies={['react']}>
+                            Starting here soon.
                         </DateRangeEvent>
                     </div>
                 </div>
