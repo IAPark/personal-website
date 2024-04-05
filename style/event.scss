@@ -29,7 +29,7 @@
 
 .education-block {
     position: relative;
-    background: #334344;
+    background: #36403E;
     color: white;
     z-index: 2;
 
@@ -38,7 +38,7 @@
 
 .experience-block {
     position: relative;
-    background: #0f314d; 
+    background: #4D3B31; 
     color: white;
     box-shadow: $boxShadow;
     z-index: 1;
@@ -53,39 +53,10 @@
 
 }
 
-[class^='tech-']:before {
+.tech {
     background: white;
     color: black;
     border-radius: 0.25em;
     padding: 1px 3px;
     font-size: 0.75em;
-}
-
-.tech-react:before {
-    content: 'React.js'
-}
-.tech-c\+\+:before {
-    content: 'C++'
-}
-.tech-flask:before {
-    content: 'Flask'
-}
-
-.tech-peewee:before {
-    content: 'Peewee'
-}
-.tech-sql:before {
-    content: 'SQL'
-}
-
-.tech-android:before {
-    content: 'Android'
-}
-
-.tech-php:before {
-    content: 'PHP'
-}
-
-.tech-pdf\.js:before {
-    content: 'PDF.js'
 }

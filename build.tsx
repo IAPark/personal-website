@@ -10,7 +10,7 @@ const page = renderToStaticMarkup(
 
       <title>I Park</title>
 
-      <link rel="stylesheet" href="/public/style.css" />
+      <link rel="stylesheet" href="/public/main.css" />
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Roboto+Slab"

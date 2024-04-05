@@ -4,11 +4,12 @@
   "description": "My personal resume site, now with inf times more React",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node build.tsx"
+    "build": "bash ./build.sh"
   },
   "author": "",
   "license": "UNLICENSED",
   "dependencies": {
+    "node-sass": "^9.0.0",
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
