@@ -30,7 +30,6 @@ body {
 .content-row > h1 {
     text-align: center;
     border-bottom: 2px solid;
-
 }
 
 a {
@@ -40,4 +39,33 @@ a {
 h1 {
     font-size: 1.25em;
     margin: 0;
+}
+
+
+.education-block {
+    position: relative;
+    background: #4D3B31; 
+    color: white;
+    box-shadow: $boxShadow;
+    z-index: 1;
+    padding-bottom: 3em;
+}
+
+.experience-block {
+    position: relative;
+    background: #36403E;
+    color: white;
+    z-index: 2;
+
+    box-shadow: $boxShadow;
+}
+
+.bio-block {
+    background-color: #394459;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 20px 0;
+    
+    position:relative;
+    z-index: 3;
 }

@@ -1,15 +1,17 @@
-
-
 .event {
     position: relative;
     display: flex;
+    flex-direction: column;
     margin-top: 40px;
     align-items: baseline;
-    flex-wrap: wrap;
     font-size: 0.95em;
     .content {
-        flex: 1;
-        flex-basis: 400px;
+        margin-top: 5px;
+    }
+
+    ul {
+        padding-left: 10px;
+        margin-bottom: 5px;
         margin-top: 5px;
     }
 }
@@ -25,32 +27,6 @@
     flex-direction: row;
     width: 187px;
     justify-content: space-between;
-}
-
-.education-block {
-    position: relative;
-    background: #36403E;
-    color: white;
-    z-index: 2;
-
-    box-shadow: $boxShadow;
-}
-
-.experience-block {
-    position: relative;
-    background: #4D3B31; 
-    color: white;
-    box-shadow: $boxShadow;
-    z-index: 1;
-    padding-bottom: 3em;
-}
-
-.projects-block {
-    position: relative;
-    background: #334344; 
-    color: white;
-    z-index: 0;
-
 }
 
 .tech {

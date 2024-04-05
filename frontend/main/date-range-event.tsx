@@ -22,14 +22,14 @@ export function DateRangeEvent(props: Props) {
       <div className="content">
         <h1>{props.mainTitle}</h1>
         <h1>{props.subTitle}</h1>
-        <div className="content">{props.children}</div>
-        {props.website ? <a>{props.website}</a> : null}
         {technologies.map((n, i) => (
           <span key={i}>
             {i > 0 ? " " : ""}
             <span className="tech">{n}</span>
           </span>
         ))}
+        <div className="content">{props.children}</div>
+        {props.website ? <a>{props.website}</a> : null}
       </div>
     </div>
   );

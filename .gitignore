@@ -5,3 +5,4 @@ public/bundle.js.map
 .DS_Store
 *.css
 *.css.map
+*.html

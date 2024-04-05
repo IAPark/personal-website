@@ -4,7 +4,8 @@
   "description": "My personal resume site, now with inf times more React",
   "main": "index.js",
   "scripts": {
-    "build": "bash ./build.sh"
+    "build": "bash ./build.sh",
+    "watch": "nodemon ./build.sh"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -17,7 +18,15 @@
     "@types/react": "^18.2",
     "@types/react-dom": "^18.2",
     "material-shadows": "^3.0.1",
+    "nodemon": "^3.1.0",
     "react": "^18.2",
     "react-dom": "^18.2"
+  },
+  "nodemonConfig": {
+    "ext": "ts,tsx,scss",
+    "execMap": {
+      "sh": "bash"
+    },
+    "delay": 500
   }
 }
