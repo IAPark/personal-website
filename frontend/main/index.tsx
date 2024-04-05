@@ -43,7 +43,7 @@ export function MainPage() {
               "Rails",
               "Postgres",
               "AWS",
-              "RedShift",
+              "Redshift",
             ]}
           >
             <ul>
@@ -86,7 +86,7 @@ export function MainPage() {
               "Rails",
               "Postgres",
               "AWS",
-              "RedShift",
+              "Redshift",
             ]}
           >
             <ul>
