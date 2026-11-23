@@ -1,0 +1,26 @@
+---
+interface Props {
+  /** 0–5, fractional values render partially filled stars */
+  rating: number;
+}
+
+const { rating } = Astro.props;
+const fills = Array.from({ length: 5 }, (_, i) => Math.max(0, Math.min(1, rating - i)));
+---
+
+<span class="stars" role="img" aria-label={`${rating} out of 5`}>
+  {fills.map((fill) => <span class="star" aria-hidden="true" style={`--fill:${fill * 100}%`}>★</span>)}
+</span>
+
+<style>
+  .stars {
+    white-space: nowrap;
+  }
+  .star {
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(to right, var(--accent) 0 var(--fill), white var(--fill) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+</style>

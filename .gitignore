@@ -1,8 +1,6 @@
 node_modules
 dist
-public/bundle.js
-public/bundle.js.map
+.astro
 .DS_Store
-*.css
-*.css.map
-*.html
+.env
+.env.*

@@ -1,0 +1,205 @@
+---
+import { Image } from "astro:assets";
+import { getEntry, render } from "astro:content";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import StarRating from "../components/StarRating.astro";
+import TimelineEvent from "../components/TimelineEvent.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+const resumeEntry = await getEntry("resume", "resume");
+if (!resumeEntry) throw new Error("Resume content not found");
+const { Content: AboutContent } = await render(resumeEntry);
+const resume = resumeEntry.data;
+
+const ratedSkills = [
+  { title: "Languages", items: resume.languages },
+  { title: "Frameworks", items: resume.frameworks },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header>
+      <SocialLinks socials={resume.socials} />
+    </Header>
+    <main>
+      <h1 class="sr-only">{resume.name}</h1>
+      <section class="bio-block">
+        <div class="container bio">
+          <aside class="basic-info">
+            <h2>Basic</h2>
+            <div class="info-line">
+              <span>Name</span>
+              <b>{resume.name}</b>
+            </div>
+            <div class="info-line">
+              <span>Email</span>
+              <a href={`mailto:${resume.email}`}>{resume.email}</a>
+            </div>
+            <div class="info-line">
+              <span>Phone</span>
+              <a href={`tel:${resume.phone}`}>{resume.phoneDisplay}</a>
+            </div>
+            {ratedSkills.map(({ title, items }) => (
+              <>
+                <h2>{title}</h2>
+                {items.map(({ name, rating }) => (
+                  <div class="info-line">
+                    <span>{name}</span>
+                    <StarRating rating={rating} />
+                  </div>
+                ))}
+              </>
+            ))}
+          </aside>
+          <div class="description">
+            <Image
+              class="profile"
+              src={resume.photo}
+              alt={resume.photoAlt}
+              width={200}
+              height={200}
+            />
+            <h2>About Me</h2>
+            <AboutContent />
+          </div>
+        </div>
+      </section>
+
+      <section class="experience-block">
+        <div class="container">
+          <h2 class="section-title">Experience</h2>
+          {resume.experience.map((item) => (
+            <TimelineEvent start={item.start} end={item.end} title={item.company} subtitle={item.role}>
+              <div class="technologies">
+                {item.technologies?.map((tech) => (
+                  <span class="tech">{tech}</span>
+                ))}
+              </div>
+              {item.bullets ? (
+                <ul>
+                  {item.bullets.map((line) => (
+                    <li>{line}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>{item.description}</p>
+              )}
+            </TimelineEvent>
+          ))}
+        </div>
+      </section>
+
+      <section class="education-block">
+        <div class="container">
+          <h2 class="section-title">Education</h2>
+          {resume.education.map((item) => (
+            <TimelineEvent start={item.start} end={item.end} title={item.school} subtitle={item.degree}>
+              <p>{item.description}</p>
+            </TimelineEvent>
+          ))}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  h2 {
+    font-size: 1.25em;
+  }
+  .bio-block {
+    background: var(--navy);
+    color: white;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    z-index: 3;
+  }
+  .bio {
+    display: grid;
+    grid-template-columns: 280px 420px;
+    align-items: start;
+  }
+  .basic-info {
+    min-width: 260px;
+    padding: 0 10px;
+  }
+  .basic-info h2 {
+    display: block;
+    border-bottom: 2px solid white;
+    text-align: center;
+    margin: 0 0 0.25em;
+  }
+  .info-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    min-height: 1.25em;
+  }
+  .info-line > span:first-child {
+    font-weight: 700;
+  }
+  .description {
+    min-width: 200px;
+    padding: 0 10px;
+  }
+  .description h2 {
+    font-size: 1.45em;
+    border: 0;
+    margin-top: 0.25em;
+  }
+  .profile {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 0.75em;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .experience-block {
+    background: var(--slate);
+    color: white;
+    position: relative;
+    z-index: 2;
+    box-shadow: var(--box-shadow);
+  }
+  .education-block {
+    background: var(--education);
+    color: white;
+    position: relative;
+    z-index: 1;
+    box-shadow: var(--box-shadow);
+  }
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 4px 0 8px;
+  }
+  .tech {
+    background: white;
+    color: black;
+    border-radius: 0.25em;
+    padding: 1px 3px;
+    font-size: 0.75em;
+  }
+  ul {
+    padding-left: 10px;
+    margin: 5px 0;
+  }
+  @media (max-width: 720px) {
+    .bio {
+      grid-template-columns: 1fr;
+    }
+    .basic-info,
+    .description {
+      width: 100%;
+    }
+  }
+</style>

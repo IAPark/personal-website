@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import ProfileImage from '../assets/face.jpg';
+---
+
+<header>
+  <nav aria-label="Main navigation">
+    <slot>
+      <a class="personal-site" href="/" aria-label="Home">
+        <Image src={ProfileImage} alt="" width={50} height={50} />
+      </a>
+    </slot>
+    <a class="blog-link" href="/blog/">Blog</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    position: relative;
+    z-index: 20;
+    height: 65px;
+    background: #ddd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.19), 0 3px 4px rgba(0, 0, 0, 0.23);
+  }
+  nav {
+    height: 100%;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .personal-site {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.12s;
+  }
+  .personal-site:hover { transform: translateY(-2px); }
+  .personal-site img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .blog-link {
+    padding: 0.3em 0.75em;
+    border: 2px solid var(--slate);
+    border-radius: 0.25em;
+    color: var(--slate);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.12s, background 0.12s;
+  }
+  .blog-link:hover { background: var(--slate); color: white; }
+  @media (max-width: 720px) {
+    nav { padding: 0 0.75em; }
+  }
+</style>

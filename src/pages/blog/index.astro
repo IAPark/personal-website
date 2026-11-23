@@ -1,0 +1,88 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "../../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1 class="sr-only">Blog</h1>
+      <section class="posts" aria-label="Blog posts">
+        <div class="container">
+          {posts.map((post) => (
+            <article class="post">
+              <a href={`/blog/${post.id}/`}>
+                <p class="date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+                <h2>{post.data.title}</h2>
+                {post.data.heroImage && (
+                  <Image width={720} height={360} src={post.data.heroImage} alt="" />
+                )}
+                <p class="description">{post.data.description}</p>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
+
+<style>
+  .posts {
+    min-height: calc(100vh - 65px);
+    background: var(--slate);
+    color: white;
+    box-shadow: var(--box-shadow);
+  }
+  .posts .container {
+    padding: 2em 1em 3em;
+  }
+  .post + .post {
+    margin-top: 2.5em;
+  }
+  .post a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+  .date {
+    margin: 0 0 0.5em;
+    color: var(--accent);
+  }
+  h2 {
+    font-size: 1.25em;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.35em;
+    margin-bottom: 0.6em;
+    transition: color 0.12s;
+  }
+  .post a:hover h2 {
+    color: var(--accent);
+  }
+  .post img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.75em;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+  }
+  .description {
+    margin: 0;
+    font-size: 0.95em;
+  }
+</style>

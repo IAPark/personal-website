@@ -1,0 +1,61 @@
+---
+interface Props {
+  start: string;
+  end?: string | null;
+  title: string;
+  subtitle: string;
+}
+
+const { start, end, title, subtitle } = Astro.props;
+---
+
+<article class="event">
+  <div class="date-range">
+    <span>{start}</span>
+    <span>—</span>
+    <span>{end ?? 'Present'}</span>
+  </div>
+  <div class="event-content">
+    <h3>{title}</h3>
+    <p class="subtitle">{subtitle}</p>
+    <slot />
+  </div>
+</article>
+
+<style>
+  .event {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px;
+    gap: 15px;
+    font-size: 0.95em;
+  }
+  .event:last-child {
+    padding-bottom: 1em;
+  }
+  .date-range {
+    width: 187px;
+    flex: none;
+    display: flex;
+    justify-content: space-between;
+    color: var(--accent);
+  }
+  .event-content {
+    flex: 1;
+  }
+  h3,
+  .subtitle {
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 0.5rem;
+  }
+  @media (max-width: 720px) {
+    .event {
+      display: block;
+    }
+    .date-range {
+      margin-bottom: 5px;
+    }
+  }
+</style>
